@@ -1,0 +1,156 @@
+html {
+    background-color: white;
+    font-family: sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+    'header header header header header header'
+    'main main main main aside aside'
+    'footer footer footer footer footer footer';
+    width: 1024px;
+    margin: 0 auto;
+    background-color: azure;
+}    
+
+.header {
+    grid-area: header;
+    margin-top: 10px;
+    background-color: aquamarine;
+}        
+
+.header h1 {
+    float: left;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header nav {
+    float: left;
+}
+
+.header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}        
+
+.header nav ul li{
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+.header nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.header div {
+    float: right;
+    border-right:1px solid #bbb;
+    background-color: #333;
+}
+
+.header div a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.mainSection {
+    grid-area: main;
+    padding: 10px;
+}        
+
+.aside {
+    grid-area: aside;
+    padding: 10px;
+    color: darkgreen;
+    background-color: lightskyblue;
+}
+
+.aside > ul > li:nth-of-type(odd) {
+    color: darkslateblue;
+}
+
+.aside > ul > li:nth-of-type(even) {
+    color: darkgreen;
+}
+
+.footer {
+    grid-area: footer;
+    padding: 10px;
+    text-align: center;
+    background-color: aquamarine;
+}        
+
+article {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 50%;
+}
+
+article:not(:last-of-type) {
+    padding-right: 10px;
+}
+
+article:not(:first-of-type) {
+    padding-left: 10px;
+}
+
+article:first-of-type p:nth-of-type(2) {
+    font-weight: bold;
+    color: blue;
+}
+
+article img {
+    width: 100%;
+}
+
+.loginSection {
+    width: 300px;
+    margin: 20px 362px 50px 362px;
+}
+
+.loginSection h2 {
+    text-transform: uppercase;
+}
+
+.loginSection form fieldset {
+    border-radius: 5px;
+}
+
+.loginSection form input {
+    box-sizing: border-box;
+}
+
+.loginSection form input[type=email], .loginSection form input[type=password] {
+    width: 100%;
+}
+
+.loginSection form input[type=submit], .loginSection form input[type=reset] {
+    width: 45%;
+    padding:5px 15px; 
+    border:0 none;
+    cursor:pointer;
+    border-radius: 3px; 
+}
+
+.loginSection form input[type=submit] {
+    background: limegreen;
+}
+
+.loginSection form input[type=reset] {
+    float: right;
+    background: yellow;
+}
